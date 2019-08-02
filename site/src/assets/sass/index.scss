@@ -1,0 +1,57 @@
+body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,dt,form,fieldset,legend,input,textarea,select{margin:0;padding:0}
+body{font:16px "宋体","Arial Narrow",HELVETICA;background:#fff;}
+a{text-decoration:none}
+em,b,i,h1,h2,h3,h4,h5,h6,strong{font-style:normal; font-weight:400;}
+li{list-style:none}
+img{border:0;vertical-align:middle}
+.ind{text-indent:2em}
+.ind10{text-indent:10px;}
+.noBorder{border:0;}
+.font12{font-size:12px;}
+$width:100% !global;
+$height:100% !global;
+html,body{
+  height:$height;
+}
+#root{
+  width:$width;
+  height:$height;
+  display: flex;
+  flex-direction: column;
+  .App{
+    width:$width;
+    height:$height;
+    display: flex;
+    flex-direction: column;
+    .header,.footer,.main{
+      width:100%;
+    }
+    .header{
+      height:100px;
+      background:red;
+    }
+    .main{
+      flex: 1;
+      background: gold;
+    }
+    .footer{
+      height:100px;
+      background:#61dafb;
+    }
+
+  }
+  .App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+
+  .App-link {
+    color: #61dafb;
+  }
+}

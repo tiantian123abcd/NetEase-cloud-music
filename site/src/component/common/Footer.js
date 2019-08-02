@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom'
 export default class Footer extends React.Component{
     render() {
         return(
-            <div>
+            <div className={'footer'}>
                 Footer
             </div>
         )
