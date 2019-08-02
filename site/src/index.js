@@ -8,7 +8,7 @@ import * as serviceWorker from './serviceWorker';
 
 React.Component.prototype.$ajax = axios;
 axios.interceptors.request.use(config=>{
-    config.url='http://10.60.15.196:8888/cloud'+config.url;
+    config.url='http://10.60.15.196:8888'+config.url;
     return config;
 });
 axios.interceptors.response.use(({data})=>{

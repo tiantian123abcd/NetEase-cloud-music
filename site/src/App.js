@@ -10,6 +10,10 @@ export default class App extends Component{
               </div>
           )
         }
+        async componentDidMount() {
+           const data = await this.$ajax.get('/login/cellphone?phone=18842493916&password=suzhongbao0.00')
+            console.log(data)
+        }
 }
 
 
