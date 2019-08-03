@@ -1,22 +1,26 @@
-import React,{ Component } from 'react';
+import React, {Component} from 'react';
 import Header from "./component/common/Header";
 import Main from "./component/common/Main";
 import Footer from "./component/common/Footer";
-export default class App extends Component{
-        render() {
-          return(
-              <div className={'App'}>
-                <Header/>
-                <Main/>
-                <Footer/>
-              </div>
-          )
-        }
-        async componentDidMount() {
-           const data = await this.$ajax.get('/login/cellphone?phone=18842493916&password=suzhongbao0.00')
-            console.log(data)
-        }
+import { BrowserRouter as Router } from 'react-router-dom'
+import {bindActionCreators} from 'redux'
+import {connect} from 'react-redux'
+import discoverCreator from './store/actionCreator/discover'
+
+class App extends Component {
+    render() {
+        return (
+            <div className={'App'}>
+                <Router>
+                    <Header/>
+                    <Main/>
+                    <Footer/>
+                </Router>
+            </div>
+        )
+    }
 }
+export default connect((state) => ({imgCollect: state.imgCollect}), dispatch => bindActionCreators(discoverCreator, dispatch))(App)
 
 
 

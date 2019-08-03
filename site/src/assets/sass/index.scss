@@ -27,7 +27,7 @@ html,body{
       width:100%;
     }
     .header{
-      height:100px;
+      height:50px;
       background:red;
     }
     .main{
@@ -35,8 +35,16 @@ html,body{
       background: gold;
     }
     .footer{
-      height:100px;
-      background:#61dafb;
+      height:50px;
+      display: flex;
+      justify-content:space-around;
+      align-items: center;
+      .App-link {
+        color: #61dafb;
+      }
+      .active{
+        color:red;
+      }
     }
 
   }
@@ -51,7 +59,5 @@ html,body{
     color: white;
   }
 
-  .App-link {
-    color: #61dafb;
-  }
+
 }
